@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://ccf4exwqh6qun"]
+[gd_scene load_steps=10 format=3 uid="uid://ccf4exwqh6qun"]
 
 [ext_resource type="MeshLibrary" uid="uid://dlp7ceqaoi805" path="res://mesh_libraries/space_library.tres" id="1_bgn2a"]
+[ext_resource type="PackedScene" uid="uid://bx7u1vt0alguq" path="res://ray_picker_camera/ray_picker_camera.tscn" id="1_n775l"]
 [ext_resource type="PackedScene" uid="uid://bw7w1fd8xbvwh" path="res://enemy/enemy.tscn" id="2_hqqs5"]
 [ext_resource type="PackedScene" uid="uid://bbjwf3l1hfk1p" path="res://base/base.tscn" id="3_h5jx5"]
 
@@ -41,8 +42,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 size = Vector3(100, 2, 100)
 material = SubResource("StandardMaterial3D_a1si8")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0, 14.5, 9.5)
+[node name="RayPickerCamera" parent="." instance=ExtResource("1_n775l")]
 
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource("1_bgn2a")
