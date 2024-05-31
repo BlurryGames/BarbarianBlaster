@@ -21,7 +21,8 @@ folder_colors={
 "res://base/": "green",
 "res://enemy/": "red",
 "res://mesh_libraries/": "purple",
-"res://ray_picker_camera/": "yellow"
+"res://ray_picker_camera/": "yellow",
+"res://turret/": "orange"
 }
 
 [input]
