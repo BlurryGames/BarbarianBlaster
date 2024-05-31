@@ -11,11 +11,13 @@ config_version=5
 [application]
 
 config/name="BarbarianBlaster"
+run/main_scene="res://base_level.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [file_customization]
 
 folder_colors={
+"res://enemy/": "red",
 "res://mesh_libraries/": "purple"
 }
