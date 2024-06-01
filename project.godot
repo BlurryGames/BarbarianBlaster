@@ -18,12 +18,14 @@ config/icon="res://icon.svg"
 [file_customization]
 
 folder_colors={
+"res://assets/": "pink",
 "res://base/": "green",
 "res://difficulty_manager/": "gray",
 "res://enemy/": "red",
 "res://mesh_libraries/": "purple",
 "res://ray_picker_camera/": "yellow",
-"res://turret/": "orange"
+"res://turret/": "orange",
+"res://user_interface/": "blue"
 }
 
 [input]

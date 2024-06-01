@@ -2,7 +2,7 @@ class_name EnemyPath extends Path3D
 
 @export var enemy_scene: PackedScene = null
 
-@export var victory_layer: CanvasLayer = null
+@export var victory_layer: VictoryLayer = null
 @export var difficulty_manager: DifficultyManager = null
 
 @onready var timer: Timer = $Timer
@@ -13,7 +13,7 @@ func enemy_defeated() -> void:
 			if c is Enemy:
 				return
 		print("You won!")
-		victory_layer.visible = true
+		victory_layer.victory()
 
 func spawn_enemy() -> void:
 	var new_enemy: Enemy = enemy_scene.instantiate()
