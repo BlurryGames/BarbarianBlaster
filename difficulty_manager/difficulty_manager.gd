@@ -5,7 +5,7 @@ signal stop_spawning_enemies
 @export var spawn_time_curve: Curve = null
 @export var enemy_health_curve: Curve = null
 
-@export var game_lenght: float = 30.0
+@export var game_lenght: float = 180.0
 
 @onready var timer: Timer = $Timer
 

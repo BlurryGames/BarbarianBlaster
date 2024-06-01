@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ccf4exwqh6qun"]
+[gd_scene load_steps=20 format=3 uid="uid://ccf4exwqh6qun"]
 
 [ext_resource type="MeshLibrary" uid="uid://dlp7ceqaoi805" path="res://mesh_libraries/space_library.tres" id="1_bgn2a"]
 [ext_resource type="PackedScene" uid="uid://bx7u1vt0alguq" path="res://ray_picker_camera/ray_picker_camera.tscn" id="1_n775l"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://turret_manager.gd" id="5_81hjb"]
 [ext_resource type="PackedScene" uid="uid://t0ntq7xqi8pv" path="res://turret/turret.tscn" id="6_a0q6v"]
 [ext_resource type="Script" path="res://bank.gd" id="8_mi1p8"]
+[ext_resource type="FontFile" uid="uid://n3exxluo1efv" path="res://assets/Asap/static/Asap-Bold.ttf" id="8_wqs5b"]
 [ext_resource type="PackedScene" uid="uid://0io4xgnxnlvj" path="res://difficulty_manager/difficulty_manager.tscn" id="9_ndnyj"]
 [ext_resource type="PackedScene" uid="uid://cj0pgb4tfb62d" path="res://user_interface/victory_layer.tscn" id="10_tuooc"]
 
@@ -36,6 +37,9 @@ point_count = 5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2lw8q"]
 albedo_color = Color(0.360784, 0.360784, 0.360784, 1)
+
+[sub_resource type="Theme" id="Theme_umgnh"]
+default_font = ExtResource("8_wqs5b")
 
 [sub_resource type="LabelSettings" id="LabelSettings_t1sy4"]
 font_size = 64
@@ -121,7 +125,6 @@ autostart = true
 
 [node name="Base" parent="." instance=ExtResource("3_h5jx5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -6)
-max_health = 50
 
 [node name="TurretManager" type="Node3D" parent="." node_paths=PackedStringArray("enemy_path")]
 script = ExtResource("5_81hjb")
@@ -135,6 +138,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+theme = SubResource("Theme_umgnh")
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
@@ -146,6 +150,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
 label_settings = SubResource("LabelSettings_t1sy4")
+uppercase = true
 
 [node name="DifficultyManager" parent="." instance=ExtResource("9_ndnyj")]
 
