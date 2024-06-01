@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 folder_colors={
 "res://base/": "green",
+"res://difficulty_manager/": "gray",
 "res://enemy/": "red",
 "res://mesh_libraries/": "purple",
 "res://ray_picker_camera/": "yellow",
