@@ -10,7 +10,7 @@ var target: Enemy = null
 @onready var turret_top: MeshInstance3D = $TurretBase/TurretTop
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	target = find_best_target()
 	if target:
 		look_at(target.global_position, Vector3.UP, true)
@@ -26,7 +26,7 @@ func _on_timer_timeout() -> void:
 func find_best_target() -> Enemy:
 	var best_target: Enemy = null
 	var best_progress: float = 0.0
-	for e: Node3D in enemy_path.get_children():
+	for e: Node in enemy_path.get_children():
 		if e is Enemy:
 			if e.progress > best_progress:
 				var distance: float = global_position.distance_to(e.global_position)
