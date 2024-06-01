@@ -1,8 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://bw7w1fd8xbvwh"]
+[gd_scene load_steps=4 format=3 uid="uid://bw7w1fd8xbvwh"]
 
 [ext_resource type="Script" path="res://enemy/enemy.gd" id="1_iauxr"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_4twbb"]
+radius = 1.0
+height = 3.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fvabg"]
 radius = 1.0
 height = 3.0
 
@@ -14,3 +18,9 @@ script = ExtResource("1_iauxr")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, 0, 1.5, 0)
 mesh = SubResource("CapsuleMesh_4twbb")
+
+[node name="EnemyArea3D" type="Area3D" parent="." groups=["EnemyArea"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnemyArea3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("CapsuleShape3D_fvabg")
