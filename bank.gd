@@ -1,0 +1,13 @@
+class_name Bank extends MarginContainer
+
+@export var starting_gold: int = 150
+
+@onready var label: Label = $Label
+
+var gold: int = 0:
+	set(gold_in):
+		gold = maxi(gold_in, 0)
+		label.text = "Gold: " + str(gold)
+
+func _ready() -> void:
+	gold = starting_gold
